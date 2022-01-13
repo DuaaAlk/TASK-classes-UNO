@@ -28,9 +28,41 @@
  *      you need to use loops and fill the cards deck in a loop (Hint: You should use `for` loops, )
  *
  */
-let cards = []; // You will use this array in step 6
 
+let cards = []; // You will use this array in step 6
+const numberOfCards = 80;
 // Continue the code here 👇🏻
+class Card {
+  constructor(color, number){
+    this.color = color;
+    this.number = number;
+  }
+  image(){
+    return `./images/${this.color}_${this.number}.png`
+  }
+}
+const color = ["Red", "Yellow", "Green", "Blue"];
+
+
+for (let colorIndex = 0; colorIndex<4 ; colorIndex++){
+  for (let number = 0; number<=9 ; number++){ 
+    cards.push(new Card(color[colorIndex],number));
+  }
+}
+
+// const card1 = new Card("Green", 3);
+// const card2 = new Card("Red", 1);
+// const card3 = new Card("Blue", 5);
+// const card4 = new Card("Yellow", 8);
+
+// cards.push(new Card("Red", 1), new Card("Blue", 3), new Card("Green", 7));
+// cards.push(card1, card2, card3, card4);
+
+// console.log(card1);
+// console.log(card2);
+// console.log(card3);
+// console.log(card4);
+
 
 /**
  *
